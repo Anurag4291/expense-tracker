@@ -58,6 +58,7 @@ def track_budget():
         print(f"You have {budget - total_expense} left for the month.")
 
 def save_expenses():
+    os.makedirs(os.path.dirname(FILENAME), exist_ok=True)  # <-- Ensure directory exists
     with open(FILENAME, 'w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=['date', 'category', 'amount', 'description'])
         writer.writeheader()

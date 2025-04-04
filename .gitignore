@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# CSV data
+data/expenses.csv
+
+# Mac and Linux
+.DS_Store
